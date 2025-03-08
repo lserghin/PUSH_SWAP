@@ -59,6 +59,8 @@ void	ft_push_back_to_a_utils1(t_list **a, t_list **b, t_list *c)
 
 void	ft_push_back_to_a_utils2(t_list **a, t_list **b, t_list *c)
 {
+	ft_get_position(*a);
+	ft_get_position(*b);
 	if (c->pos <= ft_lstsize(*b) / 2)
 	{
 		while (*b != c)
@@ -82,10 +84,11 @@ void	ft_push_back_to_a_utils2(t_list **a, t_list **b, t_list *c)
 	return ;
 }
 
-void	ft_final_rotate(t_list **stack_a)
+void	ft_last_sort(t_list **stack_a)
 {
 	t_list	*smallest;
 
+	ft_get_position(*stack_a);
 	smallest = ft_find_smallest(*stack_a);
 	if (smallest->pos <= ft_lstsize(*stack_a) / 2)
 	{

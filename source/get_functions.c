@@ -69,10 +69,7 @@ void	ft_get_target_node(t_list *stack_a, t_list *stack_b)
 			}
 			current_a = current_a->next;
 		}
-		if (best_match == INT_MAX)
-			stack_b->target = ft_find_smallest(stack_a);
-		else
-			stack_b->target = target;
+		stack_b->target = target;
 		stack_b = stack_b->next;
 	}
 	return ;

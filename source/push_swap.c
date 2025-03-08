@@ -30,16 +30,17 @@ void	ft_small_sort(t_list **stack)
 
 void	ft_push_to_b(t_list **stack_a, t_list **stack_b, int chunk_size)
 {
-	int		pushed;
-	int		chunk;
+	int	(chunk), (pushed), (max_to_push);
 
+	max_to_push = ft_lstsize(*stack_a) - 3;
 	chunk = 0;
 	while (ft_lstsize(*stack_a) > 3)
 	{
 		pushed = 0;
 		while (pushed < chunk_size && ft_lstsize(*stack_a) > 3)
 		{
-			if ((*stack_a)->index <= ((chunk + 1) * chunk_size))
+			if ((*stack_a)->index <= ((chunk + 1) * chunk_size)
+				&& (*stack_a)->index < max_to_push)
 			{
 				ft_pb(stack_a, stack_b);
 				pushed++;
@@ -67,12 +68,11 @@ void	ft_push_back_to_a(t_list **stack_a, t_list **stack_b)
 		ft_get_push_cost(*stack_a, *stack_b);
 		cheapest_node = ft_get_smallest_cost_node(*stack_b);
 		ft_push_back_to_a_utils1(stack_a, stack_b, cheapest_node);
-		ft_get_position(*stack_a);
-		ft_get_position(*stack_b);
 		ft_push_back_to_a_utils2(stack_a, stack_b, cheapest_node);
 		ft_pa(stack_a, stack_b);
 	}
-	return (ft_final_rotate(stack_a));
+	ft_last_sort(stack_a);
+	return ;
 }
 
 void	ft_push_swap(t_list **stack_a, t_list **stack_b)

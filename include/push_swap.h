@@ -34,7 +34,7 @@ void	ft_rra(t_list **stack_a);
 void	ft_rrb(t_list **stack_b);
 void	ft_rrr(t_list **stack_a, t_list **stack_b);
 
-void	ft_final_rotate(t_list **stack_a);
+void	ft_last_sort(t_list **stack_a);
 t_list	*ft_find_smallest(t_list *stack);
 t_list	*ft_find_biggest(t_list *stack);
 
