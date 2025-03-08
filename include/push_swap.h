@@ -34,7 +34,6 @@ void	ft_rra(t_list **stack_a);
 void	ft_rrb(t_list **stack_b);
 void	ft_rrr(t_list **stack_a, t_list **stack_b);
 
-void	ft_last_sort(t_list **stack_a);
 t_list	*ft_find_smallest(t_list *stack);
 t_list	*ft_find_biggest(t_list *stack);
 
@@ -47,5 +46,6 @@ void	ft_get_index(t_list *stack);
 void	ft_push_back_to_a_utils1(t_list **a, t_list **b, t_list *c);
 void	ft_push_back_to_a_utils2(t_list **a, t_list **b, t_list *c);
 void	ft_push_swap(t_list **stack_a, t_list **stack_b);
+void	ft_last_sort(t_list **stack_a);
 
 #endif
