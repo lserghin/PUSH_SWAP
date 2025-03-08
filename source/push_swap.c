@@ -30,8 +30,7 @@ void	ft_small_sort(t_list **stack)
 
 void	ft_push_to_b(t_list **stack_a, t_list **stack_b, int chunk_size)
 {
-	int	(chunk), (pushed), (max_to_push);
-
+	int (chunk), (pushed), (max_to_push);
 	max_to_push = ft_lstsize(*stack_a) - 3;
 	chunk = 0;
 	while (ft_lstsize(*stack_a) > 3)
