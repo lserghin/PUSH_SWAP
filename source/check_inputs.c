@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_inputs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lserghin <lserghin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 08:50:19 by lserghin          #+#    #+#             */
-/*   Updated: 2025/03/04 12:05:50 by marvin           ###   ########.fr       */
+/*   Created: 2025/03/09 23:06:47 by lserghin          #+#    #+#             */
+/*   Updated: 2025/03/09 23:07:35 by lserghin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	ft_free_splited(char **splited)
 	while (*free_ptr)
 		free(*free_ptr++);
 	free(splited);
+	return ;
 }
 
 void	ft_free_stack(t_list *stack)
